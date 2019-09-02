@@ -7,15 +7,17 @@
 - Un champs "matricule" : Rentré à la main
 
 
-- un champs "entreprise" : GET/entreprises/{code}
+- un champs "entreprise" : GET/entreprises
 
-- un champs "profil" : GET/profils/{code}
-
-
-- un champs "grade" : GET/grades/{code}
+- un champs "profil" : GET/profils
 
 
-- un bouton "ajouter" : POST/ajouterEmploye
+- un champs "grade" : GET/grades
+
+- un GET/referentiels qui regroupe les trois données la page "Ajouter un employé"
+
+
+- un bouton "ajouter" : POST/remuneration_employe
 
 ---
 
