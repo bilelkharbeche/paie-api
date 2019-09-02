@@ -4,8 +4,6 @@
 
 ## Web Api pour "Ajouter un employe"
 
-### Front
-
 - Un champs "matricule" : Rentré à la main
 
 
