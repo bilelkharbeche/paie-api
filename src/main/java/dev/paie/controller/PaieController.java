@@ -16,7 +16,7 @@ public class PaieController {
 
 	/** collegueService : PaieService */
 	@Autowired
-	PaieService collegueService;
+	PaieService paieService;
 
 	/**
 	 * @param code
@@ -26,7 +26,7 @@ public class PaieController {
 	@RequestMapping(value = "/entreprises", method = RequestMethod.GET)
 	public List<EntrepriseDTO> findEntreprise(String code, String denomination) {
 
-		List<Entreprise> listeEnt = collegueService.rechercheEntreprise();
+		List<Entreprise> listeEnt = paieService.rechercheEntreprise();
 		List<EntrepriseDTO> listeEntDto = new ArrayList<>();
 
 		for (Entreprise en : listeEnt) {
