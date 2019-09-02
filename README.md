@@ -26,16 +26,16 @@ ContentType: application/json
 {
 
     "matricule": XXXXX
-    "entreprise": Entreprise X
-    "profil": Cadre/Stagière/Technicien
-    "Grade": A/B/C
+    "code_entreprise": code entreprise
+    "code_profil": code du profil
+    "code_grade": code du grade
 }
 
 ---
 
 Réponse en cas de succès
 
-**200**
+**201**
 
 Content-Type: application/json
 
