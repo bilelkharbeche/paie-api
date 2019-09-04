@@ -11,6 +11,10 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+/**
+ * @author KHARBECHE Bilel
+ *
+ */
 @Entity
 @Table
 public class ProfilRemuneration {

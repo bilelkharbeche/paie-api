@@ -1,5 +1,7 @@
 package dev.paie.entites;
 
+import java.time.ZonedDateTime;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,6 +11,10 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+/**
+ * @author KHARBECHE Bilel
+ *
+ */
 @Entity
 @Table
 public class RemunerationEmploye {
@@ -26,10 +32,12 @@ public class RemunerationEmploye {
 	@ManyToOne
 	@JoinColumn(name = "profilRemuneration_id")
 	/** profilRemuneration : ProfilRemuneration */
-	private ProfilRemuneration profilRemuneration;
+	private ProfilRemuneration profil;
 	@OneToOne
 	/** grade : Grade */
 	private Grade grade;
+	/** date : ZonedDateTime */
+	private ZonedDateTime date;
 
 	/**
 	 * Getter
@@ -94,7 +102,7 @@ public class RemunerationEmploye {
 	 * @return the profilRemuneration
 	 */
 	public ProfilRemuneration getProfilRemuneration() {
-		return profilRemuneration;
+		return profil;
 	}
 
 	/**
@@ -103,8 +111,8 @@ public class RemunerationEmploye {
 	 * @param profilRemuneration
 	 *            the profilRemuneration to set
 	 */
-	public void setProfilRemuneration(ProfilRemuneration profilRemuneration) {
-		this.profilRemuneration = profilRemuneration;
+	public void setProfilRemuneration(ProfilRemuneration profil) {
+		this.profil = profil;
 	}
 
 	/**
@@ -124,6 +132,25 @@ public class RemunerationEmploye {
 	 */
 	public void setGrade(Grade grade) {
 		this.grade = grade;
+	}
+
+	/**
+	 * Getter
+	 * 
+	 * @return the date
+	 */
+	public ZonedDateTime getDate() {
+		return date;
+	}
+
+	/**
+	 * Setter
+	 * 
+	 * @param date
+	 *            the date to set
+	 */
+	public void setDate(ZonedDateTime date) {
+		this.date = date;
 	}
 
 }

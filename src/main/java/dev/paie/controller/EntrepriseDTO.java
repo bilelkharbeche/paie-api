@@ -1,5 +1,9 @@
 package dev.paie.controller;
 
+/**
+ * @author KHARBECHE Bilel
+ *
+ */
 public class EntrepriseDTO {
 
 	/** code : String */

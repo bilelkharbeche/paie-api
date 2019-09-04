@@ -23,16 +23,16 @@ public class BulletinSalaire {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	/** remunerationEmploye : RemunerationEmploye */
 	@ManyToOne
 	@JoinColumn(name = "remunerationEmploye_id")
-	/** remunerationEmploye : RemunerationEmploye */
 	private RemunerationEmploye remunerationEmploye;
+	/** periode : Periode */
 	@ManyToOne
 	@JoinColumn(name = "periode_id")
-	/** periode : Periode */
 	private Periode periode;
-	@Column(precision = 10, scale = 6)
 	/** primeExceptionnelle : BigDecimal */
+	@Column(precision = 6, scale = 2)
 	private BigDecimal primeExceptionnelle;
 
 	/**

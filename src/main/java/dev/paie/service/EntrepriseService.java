@@ -8,20 +8,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import dev.paie.entites.Entreprise;
-import dev.paie.repository.PaieRepository;
+import dev.paie.repository.EntrepriseRepository;
 
+/**
+ * @author KHARBECHE Bilel
+ *
+ */
 @Component
-public class PaieService {
+public class EntrepriseService {
 
 	/** LOG : Logger */
-	private static final Logger LOG = LoggerFactory.getLogger(PaieService.class);
+	private static final Logger LOG = LoggerFactory.getLogger(EntrepriseService.class);
 
 	/** paieRepository : PaieRepository */
 	@Autowired
-	private PaieRepository paieRepository;
+	private EntrepriseRepository paieRepository;
 
 	/**
-	 * @return listeEnt
+	 * @return la liste des entreprises
 	 */
 	public List<Entreprise> rechercheEntreprise() {
 

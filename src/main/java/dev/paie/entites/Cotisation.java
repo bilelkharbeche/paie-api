@@ -9,6 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * @author KHARBECHE Bilel
+ *
+ */
 @Entity
 @Table
 public class Cotisation {
@@ -21,10 +25,10 @@ public class Cotisation {
 	private String code;
 	/** libelle : String */
 	private String libelle;
-	@Column(precision = 10, scale = 6)
+	@Column(precision = 6, scale = 2)
 	/** tauxSalarial : BigDecimal */
 	private BigDecimal tauxSalarial;
-	@Column(precision = 10, scale = 6)
+	@Column(precision = 6, scale = 2)
 	/** tauxPatronal : BigDecimal */
 	private BigDecimal tauxPatronal;
 	/** imposable : Boolean */

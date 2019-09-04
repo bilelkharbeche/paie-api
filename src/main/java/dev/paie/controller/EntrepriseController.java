@@ -9,24 +9,28 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import dev.paie.entites.Entreprise;
-import dev.paie.service.PaieService;
+import dev.paie.service.EntrepriseService;
 
+/**
+ * @author KHARBECHE Bilel
+ *
+ */
 @RestController
-public class PaieController {
+public class EntrepriseController {
 
-	/** collegueService : PaieService */
 	@Autowired
-	PaieService paieService;
+	/** collegueService : PaieService */
+	EntrepriseService entrepriseService;
 
 	/**
 	 * @param code
 	 * @param denomination
-	 * @return listeEntDto
+	 * @return la liste des entreprises (leur code et dénomination)
 	 */
 	@RequestMapping(value = "/entreprises", method = RequestMethod.GET)
 	public List<EntrepriseDTO> findEntreprise(String code, String denomination) {
 
-		List<Entreprise> listeEnt = paieService.rechercheEntreprise();
+		List<Entreprise> listeEnt = entrepriseService.rechercheEntreprise();
 		List<EntrepriseDTO> listeEntDto = new ArrayList<>();
 
 		for (Entreprise en : listeEnt) {
@@ -37,5 +41,4 @@ public class PaieController {
 		}
 		return listeEntDto;
 	}
-
 }
