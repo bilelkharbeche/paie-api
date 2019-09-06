@@ -1,6 +1,8 @@
 package dev.paie.entites;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author KHARBECHE Bilel
@@ -22,6 +24,10 @@ public class Collegue {
 	private LocalDate dateDeNaissance;
 	/** photoUrl : String */
 	private String photoUrl;
+	/** motDePasse : String */
+	private String motDePasse;
+
+	private List<String> roles = new ArrayList<>();
 
 	/**
 	 * Constructor
@@ -42,7 +48,7 @@ public class Collegue {
 	 * @param photoUrl
 	 */
 	public Collegue(String matricule, String nom, String prenoms, String email, LocalDate dateDeNaissance,
-			String photoUrl) {
+			String photoUrl, String motDePasse, List<String> roles) {
 		super();
 		this.matricule = matricule;
 		this.nom = nom;
@@ -50,6 +56,8 @@ public class Collegue {
 		this.email = email;
 		this.dateDeNaissance = dateDeNaissance;
 		this.photoUrl = photoUrl;
+		this.motDePasse = motDePasse;
+		this.roles = roles;
 	}
 
 	/**
@@ -201,6 +209,44 @@ public class Collegue {
 	 */
 	public void setPhotoUrl(String photoUrl) {
 		this.photoUrl = photoUrl;
+	}
+
+	/**
+	 * Getter
+	 * 
+	 * @return the motDePasse
+	 */
+	public String getMotDePasse() {
+		return motDePasse;
+	}
+
+	/**
+	 * Setter
+	 * 
+	 * @param motDePasse
+	 *            the motDePasse to set
+	 */
+	public void setMotDePasse(String motDePasse) {
+		this.motDePasse = motDePasse;
+	}
+
+	/**
+	 * Getter
+	 * 
+	 * @return the roles
+	 */
+	public List<String> getRoles() {
+		return roles;
+	}
+
+	/**
+	 * Setter
+	 * 
+	 * @param roles
+	 *            the roles to set
+	 */
+	public void setRoles(List<String> roles) {
+		this.roles = roles;
 	}
 
 }
