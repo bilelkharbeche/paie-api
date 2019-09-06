@@ -3,7 +3,6 @@ package dev.paie.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import dev.paie.entites.BulletinSalaire;
 import dev.paie.repository.BulletinSalaireRepository;
 import dev.paie.repository.EntrepriseRepository;
 import dev.paie.repository.PeriodeRepository;
@@ -32,8 +31,21 @@ public class VisuBulletinSalaireService {
 	/**
 	 * @return
 	 */
-	public BulletinSalaire VisualiserBulletin() {
-		return null;
-	}
+	// public VisuBulletinSalaireDTO VisualiserBulletin(BulletinSalaire
+	// bulletin) {
+
+	// VisuBulletinSalaireDTO bulletinSal = new VisuBulletinSalaireDTO();
+	//
+	// String codeEnt =
+	// bulletin.getRemunerationEmploye().getEntreprise().getCode();
+	// String siretEnt =
+	// bulletin.getRemunerationEmploye().getEntreprise().getSiret();
+	//
+	// String matricule = bulletin.getRemunerationEmploye().getMatricule();
+	//
+	// Periode periode = bulletin.getPeriode();
+	//
+	// return null;
+	// }
 
 }

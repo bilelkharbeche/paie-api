@@ -7,9 +7,14 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+import dev.filter.JWTAuthorizationFilter;
 
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+	private JWTAuthorizationFilter jwtAuthorizationFilter;
 
 	@Bean
 	public PasswordEncoder passwordEncoder() {
@@ -21,7 +26,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 		http.csrf().disable().authorizeRequests().antMatchers(HttpMethod.GET, "/**").permitAll()
 				.antMatchers("/h2-console/**").permitAll().antMatchers("/auth").permitAll().anyRequest().authenticated()
-				.and().headers().frameOptions().disable();
+				.and().headers().frameOptions().disable().and()
+				.addFilterBefore(jwtAuthorizationFilter, UsernamePasswordAuthenticationFilter.class);
+		;
 	}
 
 }
